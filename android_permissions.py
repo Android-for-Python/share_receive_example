@@ -36,18 +36,17 @@ if platform == 'android':
 
 class AndroidPermissions:
     def __init__(self, start_app = None):
-        #################################################
-        # Customize run time permissions for the app here
-        #################################################
-        self.permissions = []
-        # Read shared file from shared storage, Android < 29
-        if api_version < 29:
-            self.permissions.append(Permission.READ_EXTERNAL_STORAGE)
-        #################################################
-
         self.permission_dialog_count = 0
         self.start_app = start_app
+        self.permissions = []
         if platform == 'android':
+            #################################################
+            # Customize run time permissions for the app here
+            #################################################
+            # Read shared file from shared storage, Android < 29
+            if api_version < 29:
+                self.permissions.append(Permission.READ_EXTERNAL_STORAGE)
+            #################################################
             self.permission_status([],[])
         elif self.start_app:
             self.start_app()
