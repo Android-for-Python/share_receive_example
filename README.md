@@ -2,7 +2,7 @@
 
 *Receive shared files or plain text from another app*
 
-Files in [shared storage](https://github.com/Android-for-Python/Android-for-Python-Users#shared-storage) can be shared with other apps. To be usable by Kivy widgets, files must be in [private storage](https://github.com/Android-for-Python/Android-for-Python-Users#private-storage). The methods to copy files between these two types of storage are in the [androidstorage4kivy](https://github.com/Android-for-Python/androidstorgage4kivy/README.me) package.
+Files in [shared storage](https://github.com/Android-for-Python/Android-for-Python-Users#shared-storage) can be shared with other apps. To be usable by Kivy widgets, files must be in [private storage](https://github.com/Android-for-Python/Android-for-Python-Users#private-storage). The methods to copy files between these two types of storage are in the [androidstorage4kivy](https://github.com/Android-for-Python/androidstorgage4kivy/README.md) package.
 
 This example receives video files shared by another app (for example share_send_example) and copies them to private storage. It maintains a queue, and plays the private files using the Kivy VideoPlayer.
 
