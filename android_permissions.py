@@ -46,6 +46,8 @@ class AndroidPermissions:
             # Read shared file from shared storage, Android < 29
             if api_version < 29:
                 self.permissions.append(Permission.READ_EXTERNAL_STORAGE)
+            else:
+                self.permissions.append(Permission.READ_MEDIA_VIDEO)
             #################################################
             self.permission_status([],[])
         elif self.start_app:

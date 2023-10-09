@@ -1,5 +1,9 @@
 # Example of receiving an Android Share of .mp4 file or plain text.
 
+# This is a workaround for SDL2 crashes
+import os
+os.environ["SDL_AUDIODRIVER"] = "android"
+
 from kivy.app import App
 from kivy.clock import Clock, mainthread
 from kivy.uix.boxlayout import BoxLayout
